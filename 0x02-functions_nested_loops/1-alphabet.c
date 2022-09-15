@@ -4,12 +4,12 @@
  * Return: 0
  */
 
-void print_alphabet(void)
+void print_aphabet(void)
 {
 	char j;
-
+	
 	j = 'a';
-
+	
 	while (j <= 'z')
 	{
 		_putchar(j);
@@ -17,4 +17,4 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
-`
+

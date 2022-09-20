@@ -2,7 +2,6 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: string
  * Return: length
  */
 
@@ -15,7 +14,7 @@ int _strlen(char *s)
 		l++;
 		s++;
 	}
-
+	
 	return (l);
 }
 
@@ -24,22 +23,81 @@ int _strlen(char *s)
  * @str: string to print
  */
 
-void puts_half(char *str)
+void puts2(char *str)
 {
-	int i;
-	int len = _strlen(str);
+	int b;
 
-	/* find the index to start depending on even/odd amount of strlen */
-	if (len % 2 != 0)
-		i = (len / 2) = 1;
-	else
-		i = (len / 2);
+	for (b = 0; str[b] != '\0' && b < _strlen(str); b += 2)
+		_putchar(str[b]);
 
-	while (i < len)
+	_puchar('\n');
+}
+#include "main.h"
+
+/**
+ * _strlen - returns the length of a string
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int l = 0;
+
+	while (*s != '\0')
 	{
-		_putchar(*(str + i));
-		i++;
+		l++;
+		s++;
 	}
-	_putchar('\n');
+	
+	return (l);
+}
+
+/**
+ * puts2 - prints every second character of a string, followed by a new line
+ * @str: string to print
+ */
+
+void puts2(char *str)
+{
+	int b;
+
+	for (b = 0; str[b] != '\0' && b < _strlen(str); b += 2)
+		_putchar(str[b]);
+
+	_puchar('\n');
+}
+#include "main.h"
+
+/**
+ * _strlen - returns the length of a string
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int l = 0;
+
+	while (*s != '\0')
+	{
+		l++;
+		s++;
+	}
+	
+	return (l);
+}
+
+/**
+ * puts2 - prints every second character of a string, followed by a new line
+ * @str: string to print
+ */
+
+void puts2(char *str)
+{
+	int b;
+
+	for (b = 0; str[b] != '\0' && b < _strlen(str); b += 2)
+		_putchar(str[b]);
+
+	_puchar('\n');
 }
 
